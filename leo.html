@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Leonardo Da Vinci
+        </title>
+        <link rel="stylesheet" href="leo.css">
+    </head>
+    <body>
+        <script type="module" href="leo.js"></script>
+        <h1>Leonardo Da Vinci</h1>
+        <img id="pic" class="center" src="/Users/seemarathi/Downloads/image-removebg-preview.png" alt="Leonardo Da Vinci Picture" width="500" height="333">
+        <p id="demo" class="ans"></p>
+        <p id="span" class="bobina">Hover Over Me To Learn More About Leonardos Da Vincis Childhood</span>
+        <p id="childhood" class="ans"></p>
+        <p id="school" class="bobina">Hover over me to learn more about leonardo da vincis art school time</span>
+        <p id="schoolp" class="ans"></p>
+        <p id="paintings" class="bobina">Hover over me to learn more about leonardo da vincis paintings</span>
+        <p id="paintp" class="ans"></p>
+        <p id="invent" class="bobina">Hover over me to learn more about somethings the leonardo da vinci invented.</p>
+        <p id="inventions" class="ans"></p>
+        <script>
+            document.getElementById("span").addEventListener("click", myFunc());
+            document.getElementById('span').addEventListener("mouseover", function(){
+                document.getElementById('childhood').innerHTML = "Leonardo Da Vinci was born on April 15, 1452, in Italy. He was born to Ser Piero and Caterina. He is known as Leonardo Da Vinci because he was born in Vinci. From childhood, no one loved Leonardo. His parents were not married, so his father left at birth and his mother left after 2 years. He was given to his grandparents who made sure he survived but gave him no love. The only person who cared about him slightly was his uncle francesco, who let him play in his large farm. From childhood, Leonardo would take drawings of everything around him. Paper was rare, but his father had a good business, which was one of the best thing his father gave him.  Not long after, his father sent him to art school because he had recognized leonardos talent. This affected leonardo the most and was his fathers greatest gift to him.";
+            });
+            document.getElementById('school').addEventListener("mouseover", function(){
+                document.getElementById('schoolp').innerHTML = "Leonardo Da Vinci went to art school to train under Andrea Del Verrocchio. After a short time, Verrocchio found out that . After a short times, he saw that Leonardo had lots of skill and more potential to be better then him. He made Leonardo a part of the painters guild.";
+            });
+            document.getElementById('span').addEventListener("mouseout", function(){
+                setTimeout(function(){ document.getElementById('childhood').innerHTML = ""; }, 1000);
+            });
+            document.getElementById('school').addEventListener("mouseout", function(){
+                setTimeout(function(){ document.getElementById('schoolp').innerHTML = ""; }, 1000);
+            });
+            document.getElementById('paintings').addEventListener("mouseover", function(){
+                document.getElementById('paintp').innerHTML = "Leonardo Da vinci is best known for his paintings. His most famous paintings include the mona lisa, a life like woman, the first of its time, and the last supper, a painting of jesus nd his followers.";
+            });           
+            document.getElementById('paintings').addEventListener("mouseout", function(){
+                setTimeout(function(){ document.getElementById('paintp').innerHTML = ""; }, 1000);
+            });
+            document.getElementById('pic').addEventListener("mouseover", function(){
+                document.getElementById('demo').innerHTML = "Leonardo Da Vinci was an italian man who is regarded as one of the greates geniuses of all time. He was a painter, engineer, sculptor, architect, scientist, philosopher, and even a military engineer. However, this is not all of his jobs. He had many other side proffesions";
+            });
+            document.getElementById('pic').addEventListener("mouseout", function(){
+                setTimeout(function(){ document.getElementById('demo').innerHTML = ""; }, 1000);
+            });
+            document.getElementById('invent').addEventListener("mouseover", function(){
+                document.getElementById('inventions').innerHTML = "Leonardo Da Vinci created a design the bike 400 years before it was invented. He also spent a lot of his life with water, inventing a early form of scuba gear. When he worked for a king, he created many war machines, like the giant crossbow and the tribble barrel cannon. However, he is best known for his flying inventions, such as the flying machine, a contraption that looked much like the wright brothers plane. ";
+            });
+            document.getElementById('invent').addEventListener("mouseout", function(){
+                setTimeout(function(){ document.getElementById('inventions').innerHTML = ""; }, 1000);
+            });                
+            function myFunc() {
+                bob = window.prompt("Type who this text in Jeopardy Form is about and you will get to pass. He painted the last supper and the mona lisa.", "Who Is Leonardo Da Vinci") 
+                if (bob === "Who Is Leonardo Da Vinci") { 
+                    document.getElementById('demo').innerHTML = ""
+                } else {
+                    alert("You get another try. Click the ok for another chance");
+                    window.location.replace('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
+                }
+            }
+        </script>
+        <div class="timeline">
+            <div class="container right">
+              <div class="content">
+                <h2>April 5, 1492</h2>
+                <p>Leonardo Da Vinci is born to Ser Piero and Caterina.</p>
+              </div>
+            </div>
+            <div class="container left">
+              <div class="content">
+                <h2>1468</h2>
+                <p>Leonardo becomes apprentice to Andrea del Verrocchio. This is where he learns all of his painting skills and hones in on them.</p>
+              </div>
+            </div>
+            <div class="container right">
+              <div class="content">
+                <h2>1498</h2>
+                <p>Leonardo finished up the last supper, a painting that depicts jesus when he tells his followers that there is one traitor amongst them.</p>
+              </div>
+            </div>
+            <div class="container left">
+              <div class="content">
+                <h2>1503</h2>
+                <p>Leonardo begins his best known painting, the mona lisa. It depicts a woman who seems like she is just staring in ones eyes. Interesting fact- The Mona Lisa became famous after it was stolen from a meuseum in the 1900's.</p>
+              </div>
+            </div>
+            <div class="container right">
+              <div class="content">
+                <h2>May 2, 1519</h2>
+                <p>Leonardo Da Vinci dies to an unkown cause, most likely belived to have been a stroke.</p>
+              </div>
+            </div>
+          </div>
+    </body>
+</html>
+
